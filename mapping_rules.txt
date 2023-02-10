@@ -1,0 +1,39 @@
+{
+    "rules": [
+        {
+            "rule-type": "selection",
+            "rule-id": "1",
+            "rule-name": "1",
+            "object-locator": {
+                "schema-name": "employees",
+                "table-name": "employee"
+            },
+            "rule-action": "include"
+        },
+        {
+            "rule-type": "object-mapping",
+            "rule-id": "2",
+            "rule-name": "TransformDDB",
+            "rule-action": "map-record-to-record",
+            "object-locator": {
+                "schema-name": "employees",
+                "table-name": "employee"
+            },
+            "target-table-name": "employeetable",
+            "mapping-parameters": {
+                "partition-key-name": "id",
+                "exclude-columns": [
+                    "id"
+                ],
+                "attribute-mappings": [
+                    {
+                        "target-attribute-name": "id",
+                        "attribute-type": "scalar",
+                        "attribute-sub-type": "string",
+                        "value": "${id}"
+                    }
+                ]
+            }
+        }
+    ]
+}

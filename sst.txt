@@ -1,0 +1,18 @@
+Local Database -> MySQL Workbench
+Imported CSV
+
+RDS Instance
+inbound rule added mysql rule
+
+DMS
+endpoints (serviceRoleARN : DMS in destination endpoint)
+connect with local DB
+replication instances
+Database Migration Tasks
+Mapping Rules 
+Task Configuration
+
+DynamoDB Table ready
+Lambda Function
+API Gateway
+Postman 
